@@ -1,0 +1,6 @@
+{
+    "groups": "sysadmin",
+    "id": "deploy",
+    "ssh_keys": "TODO",
+    "shell": "/bin/bash"
+}

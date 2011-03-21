@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "recipes": {
+    "rubygems": "Configures rubygems"
+  },
+  "providing": {
+  },
+  "maintainer": "Opscode, Inc.",
+  "replacing": {
+  },
+  "dependencies": {
+  },
+  "maintainer_email": "cookbooks@opscode.com",
+  "groupings": {
+  },
+  "license": "Apache 2.0",
+  "recommendations": {
+  },
+  "attributes": {
+  },
+  "suggestions": {
+  },
+  "long_description": "Configures rubygems sources lists\n",
+  "description": "Opscode rubygems config",
+  "name": "rubygems",
+  "conflicting": {
+  },
+  "platforms": {
+  }
+}

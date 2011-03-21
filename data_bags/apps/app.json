@@ -1,0 +1,33 @@
+{
+  "server_roles": [
+    "TODO"
+  ],
+  "gems":{
+    "bundler" : "1.0.10"
+  },
+  "unicorn": {
+
+  },
+  "nginx": {
+    "protected": false
+  },
+  "id": "TODO",
+  "type": {
+    "okl": [
+      "nginx_unicorn",
+      "rails"
+    ]
+  },
+  "deploy_to": "/var/www/app",
+  "revision":"TODO",
+  "repository":"TODO",
+  "deploy_key":"TODO, it's private, don't checkin but you need it, use knife to edit"
+  "force":{
+    "production":false
+  },
+  "migrate":{
+    "production":false
+  },
+  "owner": "deploy",
+  "group": "sysadmin"
+}

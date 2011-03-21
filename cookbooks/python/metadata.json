@@ -1,0 +1,52 @@
+{
+  "version": "1.0.2",
+  "recipes": {
+    "python::source": "Installs python from source.",
+    "python::package": "Installs python using packages.",
+    "python::pip": "Installs pip from source.",
+    "python": "Installs python, pip, and virtualenv",
+    "python::virtualenv": "Installs virtualenv using the python_pip resource."
+  },
+  "providing": {
+  },
+  "maintainer": "Opscode, Inc.",
+  "replacing": {
+  },
+  "dependencies": {
+    "build-essential": [
+
+    ]
+  },
+  "maintainer_email": "cookbooks@opscode.com",
+  "groupings": {
+  },
+  "license": "Apache 2.0",
+  "recommendations": {
+  },
+  "attributes": {
+  },
+  "suggestions": {
+  },
+  "long_description": "",
+  "description": "Installs Python, pip and virtualenv. Includes LWRPs for managing Python packages with `pip` and `virtualenv` isolated Python environments.",
+  "name": "python",
+  "conflicting": {
+  },
+  "platforms": {
+    "debian": [
+
+    ],
+    "fedora": [
+
+    ],
+    "centos": [
+
+    ],
+    "ubuntu": [
+
+    ],
+    "redhat": [
+
+    ]
+  }
+}
