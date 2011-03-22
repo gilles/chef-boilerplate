@@ -43,10 +43,10 @@ The base cookbook contains several base recipes:
 * packages => a list of packages all machines should have
 * ps1 => a system wide PS1 where all prod machines are red and staging machines are yellow
 
-The PS1 recipe contains modified system wide bashrc / profile and skeleton bashrc to solve:
+The PS1 recipe contains modified system wide bashrc / profile and skeleton bashrc because:
 
-* They override PS1
-* -z XXX && return does not play nice with RVM: [http://rvm.beginrescueend.com/rvm/install/](http://rvm.beginrescueend.com/rvm/install/) (troubleshoot)
+* The original one overrides PS1
+* the [-z XXX && return] syntax does not play nice with RVM: [http://rvm.beginrescueend.com/rvm/install/](http://rvm.beginrescueend.com/rvm/install/) (troubleshoot)
 
 Usage
 ========
