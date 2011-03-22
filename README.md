@@ -54,9 +54,9 @@ Usage
 Just clone, setup your .chef and chef-client as explained in:
 [http://help.opscode.com/kb/start/2-setting-up-your-user-environment](http://help.opscode.com/kb/start/2-setting-up-your-user-environment)
 and [http://help.opscode.com/kb/start/4-setting-up-a-chef-client](http://help.opscode.com/kb/start/4-setting-up-a-chef-client)
-<br/><br/>
+
 Include the 'production' or 'staging' role for a base installation
-<br/><br/>
+
 Update the data bags with the relevant infos. Rename and update the 'app' data bag with whatever makes sense for you.
 
 TODO
