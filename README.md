@@ -7,10 +7,11 @@ Contains the following cookbooks:
 
  * users
  * sudo
- * git
  * application for nginx / unicorn / rails
+ * rvm
+ * A base cookbook
 
-And their dependencies.
+ And their dependencies.
 
 Changes from official cookooks
 ========
@@ -32,20 +33,33 @@ Ruby
 
 Had weird errors with ubuntu ruby packages, removed bad packages.
 
+The base cookbook
+========
+
+The base cookbook contains several base recipes:
+
+* packages => a list of packages all machines should have
+* ps1 => a system wide PS1 where all prod machines are red and staging machines are yellow
+
+The PS1 recipe contains modified system wide bashrc / profile and skeleton bashrc to solve:
+
+* They override PS1
+* -z XXX && return does not play nice with RVM: [http://rvm.beginrescueend.com/rvm/install/](http://rvm.beginrescueend.com/rvm/install/) (troubleshoot)
+
 Usage
 ========
 
-Just clone, setup your .chef and chef-client as explained in: http://help.opscode.com/kb/start/2-setting-up-your-user-environment and http://help.opscode.com/kb/start/4-setting-up-a-chef-client
-
-Update the data bags with the relevant infos. Rename the 'app' data bag with whatever makes sense.
-
-include the 'production' or 'staging' role for a base installation
-
+Just clone, setup your .chef and chef-client as explained in:
+[http://help.opscode.com/kb/start/2-setting-up-your-user-environment](http://help.opscode.com/kb/start/2-setting-up-your-user-environment)
+and [http://help.opscode.com/kb/start/4-setting-up-a-chef-client](http://help.opscode.com/kb/start/4-setting-up-a-chef-client)
+<br/><br/>
+Include the 'production' or 'staging' role for a base installation
+<br/><br/>
+Update the data bags with the relevant infos. Rename and update the 'app' data bag with whatever makes sense for you.
 
 TODO
 ========
 
 * mongodb
-* rvm
 * monitoring
 * Cleanup dependecies for unused cookbooks?
