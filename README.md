@@ -1,7 +1,9 @@
 Overview
 ========
 
-My base chef repo.
+Boilerplate to setup a new chef repo. It's really oriented nginx / unicorn / rails / mongodb but the base cookbooks/roles/data_bags are there.
+
+The primary goal of the boilerplate is to create the base instance image. The secondary goal is to setup a nginx / unicorn / rails / mongodb application.
 
 Contains the following cookbooks:
 
@@ -60,6 +62,7 @@ Update the data bags with the relevant infos. Rename and update the 'app' data b
 TODO
 ========
 
-* mongodb
-* monitoring
-* Cleanup dependecies for unused cookbooks?
+* mongodb + make it work with the application cookbook.
+* monitoring (but which one)
+* Make the application cookbook play nice with RVM
+* Cleanup dependecies for unused cookbooks? Not sure about that.
