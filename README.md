@@ -13,7 +13,9 @@ Contains the following cookbooks:
  * rvm
  * A base cookbook
 
- And their dependencies.
+And their dependencies.
+
+Feedback and suggestions are more than welcome.
 
 Changes from official cookooks
 ========
