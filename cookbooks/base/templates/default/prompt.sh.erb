@@ -1,0 +1,8 @@
+###HANDLED BY CHEF
+
+extra=""
+<%- @color ||= '' %>
+if type rvm-prompt >/dev/null 2>&1; then
+  extra+="\[\e[1;36m\](\$(rvm-prompt i v g)) "
+fi
+export PS1="<%= @color %>[\u@\h] \[\e[1;35m\]\w\[\e[0m\] $extra\[\e[0m\]\$ "

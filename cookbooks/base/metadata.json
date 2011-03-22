@@ -1,0 +1,29 @@
+{
+  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES:\n\n= USAGE:\n\n",
+  "conflicting": {
+  },
+  "attributes": {
+  },
+  "version": "0.0.1",
+  "providing": {
+  },
+  "dependencies": {
+  },
+  "maintainer": "YOUR_COMPANY_NAME",
+  "recipes": {
+  },
+  "replacing": {
+  },
+  "license": "All rights reserved",
+  "maintainer_email": "YOUR_EMAIL",
+  "groupings": {
+  },
+  "recommendations": {
+  },
+  "platforms": {
+  },
+  "name": "base",
+  "suggestions": {
+  },
+  "description": "Installs/Configures base"
+}
