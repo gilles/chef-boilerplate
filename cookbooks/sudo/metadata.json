@@ -1,20 +1,6 @@
 {
-  "version": "0.9.1",
-  "recipes": {
-    "sudo": "Installs sudo and configures /etc/sudoers"
-  },
-  "providing": {
-  },
-  "maintainer": "Opscode, Inc.",
-  "replacing": {
-  },
-  "dependencies": {
-  },
-  "maintainer_email": "cookbooks@opscode.com",
-  "groupings": {
-  },
-  "license": "Apache 2.0",
-  "recommendations": {
+  "long_description": "",
+  "conflicting": {
   },
   "attributes": {
     "authorization/sudoers/groups": {
@@ -28,8 +14,8 @@
       "recipes": [
 
       ],
-      "display_name": "Sudo Groups",
-      "description": "Groups who are allowed sudo ALL"
+      "description": "Groups who are allowed sudo ALL",
+      "display_name": "Sudo Groups"
     },
     "authorization": {
       "required": "optional",
@@ -41,8 +27,8 @@
       "recipes": [
 
       ],
-      "display_name": "Authorization",
-      "description": "Hash of Authorization attributes"
+      "description": "Hash of Authorization attributes",
+      "display_name": "Authorization"
     },
     "authorization/sudoers/users": {
       "required": "optional",
@@ -55,8 +41,8 @@
       "recipes": [
 
       ],
-      "display_name": "Sudo Users",
-      "description": "Users who are allowed sudo ALL"
+      "description": "Users who are allowed sudo ALL",
+      "display_name": "Sudo Users"
     },
     "authorization/sudoers": {
       "required": "optional",
@@ -68,16 +54,26 @@
       "recipes": [
 
       ],
-      "display_name": "Authorization Sudoers",
-      "description": "Hash of Authorization/Sudoers attributes"
+      "description": "Hash of Authorization/Sudoers attributes",
+      "display_name": "Authorization Sudoers"
     }
   },
-  "suggestions": {
+  "version": "0.9.1",
+  "providing": {
   },
-  "long_description": "",
-  "description": "Installs sudo and configures /etc/sudoers",
-  "name": "sudo",
-  "conflicting": {
+  "dependencies": {
+  },
+  "maintainer": "Opscode, Inc.",
+  "recipes": {
+    "sudo": "Installs sudo and configures /etc/sudoers"
+  },
+  "replacing": {
+  },
+  "license": "Apache 2.0",
+  "maintainer_email": "cookbooks@opscode.com",
+  "groupings": {
+  },
+  "recommendations": {
   },
   "platforms": {
     "debian": [
@@ -98,5 +94,9 @@
     "redhat": [
 
     ]
-  }
+  },
+  "name": "sudo",
+  "suggestions": {
+  },
+  "description": "Installs sudo and configures /etc/sudoers"
 }
