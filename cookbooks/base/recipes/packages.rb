@@ -2,6 +2,7 @@
 
 packages = case node[:platform]
   when "ubuntu", "debian"
+    include_recipe "apt"
     [
             "libxml2-dev",
             "libxslt1-dev",

@@ -8,6 +8,9 @@
   "providing": {
   },
   "dependencies": {
+    "apt": [
+
+    ]
   },
   "maintainer": "YOUR_COMPANY_NAME",
   "recipes": {
