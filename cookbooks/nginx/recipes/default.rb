@@ -54,3 +54,8 @@ service "nginx" do
   supports :status => true, :restart => true, :reload => true
   action [ :enable, :start ]
 end
+
+#no default site
+nginx_site :default do
+  enable false
+end

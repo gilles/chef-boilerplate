@@ -1,4 +1,4 @@
-upstream app_server {
+upstream <%= @app %>_unicorn {
   # fail_timeout=0 means we always retry an upstream even if it failed
   # to return a good HTTP response (in case the Unicorn master nukes a
   # single worker for timing out).
@@ -11,14 +11,32 @@ server {
   listen  80 default deferred;
   server_name  <%= node[:hostname] %>;
 
-  #remove keep alive if we are hugely successful
-  keepalive_timeout 3;
-
   root <%= @docroot %>;
 
   access_log  <%= node[:nginx][:log_dir] %>/okl.access.log;
 
+  if (-f $document_root/system/maintenance.html) {
+    rewrite  ^(.*)$  /system/maintenance.html break;
+  }
+
+  location ~* \.(png|gif|jpg|jpeg|css|js|swf|ico)(\?[0-9]+)?$ {
+    #extension can be used in dynamic pages as well (format / beacon)
+    #make sure it is passed to the backend if the file does not exists
+    if (-f $document_root$uri) {
+      access_log off;
+      expires max;
+      add_header Cache-Control public;
+    }
+    try_files $uri @proxy;
+  }
+
+  # Try to serve static files from nginx, no point in making an
+  # *application* server like Unicorn/Rainbows! serve static files.
   location / {
+    try_files $uri @proxy;
+  }
+
+  location @proxy {
 
     # an HTTP header important enough to have its own Wikipedia entry:
     #  http://en.wikipedia.org/wiki/X-Forwarded-For
@@ -43,12 +61,7 @@ server {
     # clients, really.
     # proxy_buffering off;
 
-    # Try to serve static files from nginx, no point in making an
-    # *application* server like Unicorn/Rainbows! serve static files.
-    if (!-f $request_filename) {
-      proxy_pass http://app_server;
-      break;
-    }
+    proxy_pass http://<%= @app %>_unicorn;
    }
 
    # Rails error pages
